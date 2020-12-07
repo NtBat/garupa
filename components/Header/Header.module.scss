@@ -1,0 +1,97 @@
+@import "../../styles/variables.scss";
+
+.header {
+  .barTop {
+    height: 45px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    .infoBar {
+      background: $first;
+      padding: 10px 40px;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      width: 40%;
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      a {
+        margin-right: 12px;
+      }
+
+      span {
+        color: $zero;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .phone {
+        margin-left: 40px;
+
+        img {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    width: 60%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      ul {
+        display: flex;
+
+        li {
+          &:not(:last-child) {
+            margin-right: 30px;
+          }
+        }
+
+        a {
+          color: $title;
+          font-weight: bold;
+          font-size: 14px;
+          text-transform: uppercase;
+
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 6px;
+            left: 50%;
+            bottom: -30px;
+            background-color: $title;
+            transition: all 0.3s ease;
+          }
+
+          &:hover::after {
+            width: 100%;
+            left: 0;
+          }
+
+          &.active {
+            color: $first;
+          }
+        }
+      }
+    }
+  }
+}
