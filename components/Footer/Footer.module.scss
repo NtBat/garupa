@@ -70,6 +70,10 @@
       img {
         margin-right: 5px;
       }
+
+      @media (min-width: 1280px) {
+        column-count: 2;
+      }
     }
 
     .social,
