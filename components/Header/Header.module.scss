@@ -43,8 +43,12 @@
   }
 
   .wrapper {
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
+
+    @media (min-width: 1800px) {
+      width: 60%;
+    }
 
     display: flex;
     align-items: center;

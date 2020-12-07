@@ -5,8 +5,13 @@
   background: #1f1a17;
 
   .wrapper {
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
+
+    @media (min-width: 1800px) {
+      width: 60%;
+    }
+
     padding: 40px 0;
 
     display: flex;

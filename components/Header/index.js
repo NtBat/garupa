@@ -11,7 +11,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.barTop}>
         <div className={styles.infoBar}>
-          <div className={styles.wrapper}>
+          <div className={styles.wrapperInfo}>
             <a href="#">
               <img src="/facebook-top.svg" alt="Facebook da empresa" />
             </a>
