@@ -1,0 +1,156 @@
+@import "../../styles/variables.scss";
+
+.wrapper {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 60px;
+
+  display: flex;
+
+  .boxWrapper {
+    width: 50%;
+  }
+
+  .newsBox {
+    display: flex;
+    flex-wrap: wrap;
+
+    .box {
+      width: 46%;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .category {
+      background: $first;
+      border-radius: 4px;
+      width: 130px;
+      height: 30px;
+      color: $zero;
+      font-size: 12px;
+      margin-top: -20px;
+      position: relative;
+      margin-left: 30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .text {
+      background: $zero;
+      margin-top: -4px;
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+      padding: 0 30px 20px 30px;
+
+      .date {
+        display: block;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $second;
+        margin-top: 20px;
+      }
+
+      .description {
+        font-weight: bold;
+        display: block;
+        font-size: 14px;
+        margin-top: 8px;
+        color: $title;
+      }
+    }
+
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .eventsBox {
+    padding-left: 10px;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    li:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    .box {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .text {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      padding-right: 20px;
+    }
+
+    .description {
+      font-weight: bold;
+      font-size: 16px;
+      color: $zero;
+    }
+
+    .date {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $second;
+      margin-top: 20px;
+    }
+  }
+}
+
+.title {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: $title;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 6px;
+    width: 100px;
+    background: $first;
+    bottom: -15px;
+  }
+}
+
+.button {
+  margin-top: 30px;
+  width: 184px;
+  background: $first;
+  color: $zero;
+  height: 45px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: all 300ms linear;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    margin-left: 30px;
+  }
+
+  &:hover {
+    transform: scale(0.98);
+  }
+}

@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-
 import styles from "./Infos.module.scss";
 
-export default function Header() {
+export default function Infos() {
   return (
     <div>
       <div className={styles.wrapper}>
