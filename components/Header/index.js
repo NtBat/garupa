@@ -7,12 +7,6 @@ import styles from "./Header.module.scss";
 export default function Header() {
   const router = useRouter();
 
-  const [menuBurger, setActiveMenuBurger] = useState(false);
-
-  function handleBurger() {
-    setActiveMenuBurger(!menuBurger);
-  }
-
   return (
     <header className={styles.header}>
       <div className={styles.barTop}>
