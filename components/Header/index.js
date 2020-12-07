@@ -7,6 +7,12 @@ import styles from "./Header.module.scss";
 export default function Header() {
   const router = useRouter();
 
+  const [menuBurger, setActiveMenuBurger] = useState(false);
+
+  function handleBurger() {
+    setActiveMenuBurger(!menuBurger);
+  }
+
   return (
     <header className={styles.header}>
       <div className={styles.barTop}>
@@ -104,6 +110,15 @@ export default function Header() {
             </li>
           </ul>
         </nav>
+
+        <div
+          className={`${styles.menu} ${menuBurger && styles.menuActive}`}
+          onClick={handleBurger}
+        >
+          <span className={`${styles.menuBurger} ${styles.menuTop}`}></span>
+          <span className={`${styles.menuBurger} ${styles.menuMiddle}`}></span>
+          <span className={`${styles.menuBurger} ${styles.menuBottom}`}></span>
+        </div>
       </div>
     </header>
   );

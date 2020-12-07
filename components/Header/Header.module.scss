@@ -4,8 +4,12 @@
   .barTop {
     height: 45px;
 
-    display: flex;
+    display: none;
     justify-content: flex-end;
+
+    @media (min-width: 1280px) {
+      display: flex;
+    }
 
     .infoBar {
       background: $first;
@@ -14,7 +18,11 @@
 
       display: flex;
       align-items: center;
-      width: 40%;
+      width: 100%;
+
+      @media (min-width: 1280px) {
+        width: 40%;
+      }
 
       div {
         display: flex;
@@ -42,9 +50,23 @@
     }
   }
 
+  .linkLogo {
+    img {
+      width: 130px;
+      @media (min-width: 1280px) {
+        width: auto;
+      }
+    }
+  }
+
   .wrapper {
     width: 90%;
     margin: 0 auto;
+    padding: 10px 0;
+
+    @media (min-width: 1280px) {
+      padding: 0;
+    }
 
     @media (min-width: 1800px) {
       width: 60%;
@@ -52,11 +74,19 @@
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+
+    @media (min-width: 1280px) {
+      justify-content: space-around;
+    }
 
     nav {
-      display: flex;
-      align-items: center;
+      display: none;
+
+      @media (min-width: 1280px) {
+        display: flex;
+        align-items: center;
+      }
 
       ul {
         display: flex;
@@ -96,6 +126,56 @@
           }
         }
       }
+    }
+  }
+
+  .menu {
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+
+    @media (min-width: 1280px) {
+      display: none;
+    }
+
+    &.menuActive {
+      .menuTop {
+        backface-visibility: hidden;
+        top: 0;
+        transform: rotate(50deg);
+        transition: 300ms 300ms;
+      }
+
+      .menuMiddle {
+        opacity: 0;
+      }
+
+      .menuBottom {
+        backface-visibility: hidden;
+        top: 0;
+        transform: rotate(-410deg);
+        transition: 300ms 300ms;
+      }
+    }
+
+    .menuBurger {
+      backface-visibility: hidden;
+      position: absolute;
+      left: 0;
+      border-top: 5px solid $first;
+      width: 100%;
+      transition: 0.55s;
+      border-radius: 7px;
+    }
+
+    .menuTop {
+      top: 0;
+    }
+    .menuMiddle {
+      top: 8px;
+    }
+    .menuBottom {
+      top: -8px;
     }
   }
 }
